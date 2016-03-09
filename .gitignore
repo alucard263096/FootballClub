@@ -18,3 +18,12 @@ nytprof.out
 *.o
 *.bs
 /_eumm/
+*.suo
+logs/
+templates_c/
+upload/
+packages/
+obj/
+bin/
+
+

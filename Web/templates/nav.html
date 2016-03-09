@@ -1,0 +1,36 @@
+
+<div class="row" id="loginnav">
+    <div class="col-md-2 col-md-push-10 text-right small">
+        <div class="row">                         
+            {{if $USERLOGINED=="Y"}}
+            <div class="col-md-6 navitem text-center">
+                <a href="{{$rootpath}}/User/dashboard.php">
+                    <img src="{{$rootpath}}/images/reg.png" />
+                    <div>进入控制面板</div>
+                </a>
+            </div>
+            {{/if}}
+            {{if $LOGINED=="Y"}}
+            <div class="col-md-6 navitem text-center">
+                <a href="{{$rootpath}}/Member/logout.php">
+                    <img src="{{$rootpath}}/images/reg.png" />
+                    <div>退出登录</div>
+                </a>
+            </div>
+            {{else}}
+            <div class="col-md-6 navitem text-center">
+                <a href="{{$rootpath}}/Member/login.php?parenturl={{$request_url_encode}}">
+                    <img src="{{$rootpath}}/images/login.png" />
+                    <div>用户登录</div>
+                </a>
+            </div>
+            <div class="col-md-6 navitem text-center">
+                <a href="{{$rootpath}}/Member/reg.php?parenturl={{$request_url_encode}}">
+                    <img src="{{$rootpath}}/images/reg.png" />
+                    <div>快速注册</div>
+                </a>
+            </div>
+            {{/if}}
+        </div>
+    </div>
+</div>

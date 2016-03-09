@@ -1,12 +1,12 @@
 <?php
 
 #[Root]
-$CONFIG['rootpath']		= '/NCMI';  
+$CONFIG['rootpath']		= '/FootballClub';  
 //$CONFIG['charset']		= 'utf-8'; 
-$CONFIG['URL']="http://www.myhkdoc.com/NCMI";
+$CONFIG['URL']="http://www.myhkdoc.com/FootballClub";
 $CONFIG["SessionName"]="NCMI";
 
-$CONFIG['smarty']['rootpath']		= '/NCMI'; 
+$CONFIG['smarty']['rootpath']		= '/FootballClub'; 
 $CONFIG['solution_configuration']='release';
 $CONFIG['server']		= 'windows';   //windows or linux
 

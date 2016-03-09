@@ -1,117 +1,15 @@
 
-            </div>
-            <div class="row" style="margin-top:20px;">
-                <div class="col-md-12" >
-                    <div id="footer">
-                        <div class="row">
-                            <div class="col-md-8 col-md-offset-2  text-center small">
-                                <div class="row">
-                                    <div class="col-md-5">
-                                        主管单位：{{$SITEINFO.department}}
-                                    </div>
-                                    <div class="col-md-7">
-                                        技术支持：{{$SITEINFO.techsupport}}
-                                    </div>
-                                </div>
-                                <div class="row" style="margin-top:7px;">
-                                    <div class="col-md-6">
-                                        地址：{{$SITEINFO.address}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        电话：{{$SITEINFO.tel}}
-                                    </div>
-                                    <div class="col-md-3">
-                                        {{$SITEINFO.icp}}
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-
-<div id="dialog_box" class="modal fade" tabindex="-1" role="dialog" aria-labelledby="dialog_boxtitle" aria-hidden="true">
-    <div class="modal-dialog">
-        <div class="modal-content">
-            <div class="modal-header">
-                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
-                <h4 id="dialog_boxtitle" class="modal-title">消息</h4>
-            </div>
-            <div class="modal-body">
-                <p id="dialog_boxmsg"></p>
-            </div>
-            <div class="modal-footer">
-                <button type="button" id="dialog_boxBtnConfirm" class="btn btn-success">确定</button>
-                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
-            </div>
-        </div>
+<hr />
+<footer>
+    <p>&copy; 2016 - 我的 ASP.NET 应用程序</p>
+</footer>
     </div>
-</div>
-<script>
-    function infoDialog(msg) {
-        $("#dialog_boxtitle").text("提示");
-        showDialog(msg);
-    }
 
-    function warningDialog(msg) {
-        $("#dialog_boxtitle").text("警告");
-        showDialog(msg);
-    }
+<script src="{{$rootpath}}/scripts/jquery-2.2.1.js"></script>
 
-    function errorDialog(msg) {
-        $("#dialog_boxtitle").text("错误");
-        showDialog(msg);
-    }
-    function showDialog(msg) {
-        $("#dialog_boxBtnConfirm").hide();
-        $("#dialog_boxmsg").html(msg);
-        $("#dialog_box").modal('show');
-    }
+<script src="{{$rootpath}}/scripts/bootstrap.js"></script>
+<script src="{{$rootpath}}/scripts/respond.js"></script>
 
 
-                    function confirmDialog(title, msg, confirmFunction) {
-
-                        $("#dialog_boxtitle").text(title);
-                        $("#dialog_boxmsg").html(msg);
-                        $("#dialog_boxBtnConfirm").unbind("click").click(function () {
-
-                            $("#dialog_box").modal('hide');
-                            confirmFunction();
-                        });
-                        $("#dialog_boxBtnConfirm").show();
-                        $("#dialog_box").modal("show");
-
-                    }
-
-</script>
-
-<script>
-    var MAIN_meeting_link = "";
-    var meetingtips;
-    $(document).ready(function () {
-        meetingtips = setInterval("MAIN_checkHaveMeeting()", 60000);
-        MAIN_checkHaveMeeting();
-    });
-    function MAIN_checkHaveMeeting() {
-        $.post("{{$rootpath}}/Order/checkmeeting.php", function (data) {
-            if (data != "") {
-                if (checkURL(data)) {
-                    MAIN_meeting_link = data;
-                    clearInterval(meetingtips);
-                    confirmDialog("视频会诊提示", "你有一个视频会诊即将开始，点击确定立刻开始进行视频会诊", MAIN_gotoMeeting);
-                }
-            }
-        });
-    }
-    function MAIN_gotoMeeting() {
-        if (MAIN_meeting_link != "") {
-            window.open(MAIN_meeting_link);
-        }
-    }
-</script>
-
-<script src="{{$rootpath}}/welive/welive.php" language="javascript"></script>
-    </body>
+</body>
 </html>

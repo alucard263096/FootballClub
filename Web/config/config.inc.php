@@ -1,12 +1,12 @@
 <?php
 
 #[Root]
-$CONFIG['rootpath']		= '/NCMI/Website';  
+$CONFIG['rootpath']		= '/FootballClub/Web';  
 //$CONFIG['charset']		= 'utf-8'; 
-$CONFIG['URL']="http://localhost/NCMI/Website";
+$CONFIG['URL']="http://localhost/FootballClub/Website";
 $CONFIG["SessionName"]="NCMI";
 
-$CONFIG['smarty']['rootpath']		= '/NCMI/Website'; 
+$CONFIG['smarty']['rootpath']		= '/FootballClub/Web'; 
 $CONFIG['solution_configuration']='debug';
 $CONFIG['server']		= 'windows';   //windows or linux
 
@@ -46,12 +46,6 @@ $CONFIG['fileupload']['try_interval']		= "1";//second
 #[Excel]
 $CONFIG['excel']['version']	= "Excel2007";//2003:Excel5,2007:Excel2007
 
-
-#[Gensee]
-$CONFIG["gensee"]["site"]="jwyk.gensee.com";  
-$CONFIG["gensee"]["loginName"]="admin@jwyk.com";
-$CONFIG["gensee"]["password"]="mfg-19780425";
-$CONFIG["gensee"]["organizerPwd"]="888888";
 
 
 

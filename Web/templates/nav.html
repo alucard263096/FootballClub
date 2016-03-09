@@ -1,36 +1,26 @@
+<div class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="/">球迷网</a>
+        </div>
+        <div class="navbar-collapse collapse">
+            <ul class="nav navbar-nav">
+                <li><a href="#">主页</a></li>
+                <li><a href="#">球星风采</a></li>
+                <li><a href="#">大球市</a></li>
+                <li><a href="#">排行榜</a></li>
+                <li><a href="#">讲武堂</a></li>
+                <li><a href="#">个人信息</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#" class="btn btn-default" id="registerLink">创建球队</a></li>
+            </ul>
 
-<div class="row" id="loginnav">
-    <div class="col-md-2 col-md-push-10 text-right small">
-        <div class="row">                         
-            {{if $USERLOGINED=="Y"}}
-            <div class="col-md-6 navitem text-center">
-                <a href="{{$rootpath}}/User/dashboard.php">
-                    <img src="{{$rootpath}}/images/reg.png" />
-                    <div>进入控制面板</div>
-                </a>
-            </div>
-            {{/if}}
-            {{if $LOGINED=="Y"}}
-            <div class="col-md-6 navitem text-center">
-                <a href="{{$rootpath}}/Member/logout.php">
-                    <img src="{{$rootpath}}/images/reg.png" />
-                    <div>退出登录</div>
-                </a>
-            </div>
-            {{else}}
-            <div class="col-md-6 navitem text-center">
-                <a href="{{$rootpath}}/Member/login.php?parenturl={{$request_url_encode}}">
-                    <img src="{{$rootpath}}/images/login.png" />
-                    <div>用户登录</div>
-                </a>
-            </div>
-            <div class="col-md-6 navitem text-center">
-                <a href="{{$rootpath}}/Member/reg.php?parenturl={{$request_url_encode}}">
-                    <img src="{{$rootpath}}/images/reg.png" />
-                    <div>快速注册</div>
-                </a>
-            </div>
-            {{/if}}
         </div>
     </div>
 </div>

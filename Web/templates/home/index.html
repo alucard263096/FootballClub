@@ -1,0 +1,42 @@
+{{include  file="$smarty_root/header.html" }}
+
+
+<div class="row">
+    <div class="col-md-2">
+        <div class="list-group" id="lstMenu">
+            <a href="#" class="list-group-item btnMenu" tabid="inbox">信件箱<span class="badge">14</span></a>
+            <a href="#" class="list-group-item btnMenu" tabid="calendar">日程</a>
+            <a href="#" class="list-group-item btnMenu" tabid="concern">我的关注</a>
+            <a href="#" class="list-group-item btnMenu" tabid="setting">设置</a>
+        </div>
+    </div>
+    <div class="col-md-10">
+        <div class="row TabContext" id="inbox" >信件箱
+        </div>
+        <div class="row TabContext" id="calendar">
+            日程
+        </div>
+        <div class="row TabContext" id="concern">
+            我的关注
+        </div>
+        <div class="row TabContext" id="setting">
+            设置
+        </div>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        $("#lstMenu .btnMenu").click(function () {
+            var tabid = $(this).attr("tabid");
+            $(".TabContext").hide();
+            $("#" + tabid).show();
+            $("#lstMenu .btnMenu").removeClass("active");
+            $(this).addClass("active");
+        });
+        $("#lstMenu .btnMenu").first().addClass("active").click();
+    });
+</script>
+
+
+{{include  file="$smarty_root/footer.html" }}

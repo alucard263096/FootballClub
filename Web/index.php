@@ -1,3 +1,3 @@
 <script>
-location.href="home/";
+location.href="Home/";
 </script>

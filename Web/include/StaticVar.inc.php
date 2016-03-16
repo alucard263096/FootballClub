@@ -7,7 +7,8 @@
  */
 //set include path and config
 
+$_MYSITE["title"]="草榴足球圈";
 
 
-
+$smarty->assign("MYSITE",$_MYSITE);
 ?>

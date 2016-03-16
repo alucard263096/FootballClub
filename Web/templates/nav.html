@@ -1,36 +1,185 @@
-<div class="navbar navbar-inverse navbar-fixed-top">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="" href="{{$rootpath}}/">
-                <img src="{{$rootpath}}/images/logo.png" style="height:60px;padding-top:10px;padding-bottom:10px;" />
+<!-- nav -->
+<nav class="nav-primary hidden-xs">
+    <ul class="nav bg clearfix">
+        <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+            发现
+        </li>
+        <li>
+            <a href="index.html">
+                <i class="icon-disc icon text-success"></i>
+                <span class="font-bold">最新消息</span>
             </a>
-        </div>
-        <div class="navbar-collapse collapse">
-            <ul class="nav navbar-nav">
-                <li><a href="{{$rootpath}}/Home/" >首页</a></li>
-                <li><a href="#">我的球队</a></li>
-                <li><a href="#">球星风采</a></li>
-                <li><a href="#">大球市</a></li>
-                <li><a href="#">讲武堂</a></li>
-            </ul>
-            <div>
-                <form class="navbar-form navbar-left" role="search">
-                    <div class="form-group">
-                        <input type="text" class="form-control" placeholder="搜索球员，球队，比赛信息">
-                    </div>
-                    <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search" aria-hidden="true"></span></button>
-                </form>
-            </div>
-            <ul class="nav navbar-nav navbar-right">
+        </li>
+        <li>
+            <a href="genres.html">
+                <i class="icon-calendar icon text-info"></i>
+                <span class="font-bold">日程</span>
+            </a>
+        </li>
+        <li>
+            <a href="events.html">
+                <i class="icon-drawer icon text-primary-lter"></i>
+                <b class="badge bg-primary pull-right">6</b>
+                <span class="font-bold">事件</span>
+            </a>
+        </li>
+        <li>
+            <a href="listen.html">
+                <i class="icon-picture icon  text-info-dker"></i>
+                <span class="font-bold">球星风采</span>
+            </a>
+        </li>
+        <li>
+            <a href="listen.html">
+                <i class="icon-list icon  text-info-dker"></i>
+                <span class="font-bold">讲武堂</span>
+            </a>
+        </li>
+        <li class="m-b hidden-nav-xs"></li>
+    </ul>
+    <ul class="nav" data-ride="collapse">
+        <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+            绿茵场
+        </li>
+        <li>
+            <a href="#" class="auto">
+                <span class="pull-right text-muted">
+                    <i class="fa fa-angle-left text"></i>
+                    <i class="fa fa-angle-down text-active"></i>
+                </span>
+                <i class="fa-level-up fa">
+                </i>
+                <span>排行榜</span>
+            </a>
+            <ul class="nav dk text-sm">
                 <li>
-                    <button class="btn btn-default " style="margin-top:10px;">创建球队</button>
+                    <a href="layout-color.html" class="auto">
+                        <i class="fa fa-angle-right text-xs"></i>
+
+                        <span>球队排名</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="layout-boxed.html" class="auto">
+                        <i class="fa fa-angle-right text-xs"></i>
+
+                        <span>球星排名</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="layout-fluid.html" class="auto">
+                        <i class="fa fa-angle-right text-xs"></i>
+
+                        <span>活跃度排名</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="layout-fluid.html" class="auto">
+                        <i class="fa fa-angle-right text-xs"></i>
+                        <span>进球数排名</span>
+                    </a>
                 </li>
             </ul>
-        </div>
-    </div>
-</div>
+        </li>
+        <li>
+            <a href="#" class="auto">
+                <span class="pull-right text-muted">
+                    <i class="fa fa-angle-left text"></i>
+                    <i class="fa fa-angle-down text-active"></i>
+                </span>
+                <i class="icon-chemistry icon">
+                </i>
+                <span>比赛信息</span>
+            </a>
+            <ul class="nav dk text-sm">
+                <li>
+                    <a href="buttons.html" class="auto">
+                        <i class="fa fa-angle-right text-xs"></i>
+
+                        <span>求约战</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="icons.html" class="auto">
+                        <b class="badge bg-info pull-right">369</b>
+                        <i class="fa fa-angle-right text-xs"></i>
+
+                        <span>焦点之战</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="http://www.weidea.net" class="auto">
+                        <b class="badge bg-info pull-right">369</b>
+                        <i class="fa fa-angle-right text-xs"></i>
+
+                        <span>找救火队</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+        <li>
+            <a href="#" class="auto">
+                <span class="pull-right text-muted">
+                    <i class="fa fa-angle-left text"></i>
+                    <i class="fa fa-angle-down text-active"></i>
+                </span>
+                <i class="fa-shopping-cart fa">
+                </i>
+                <span>球星超市</span>
+            </a>
+            <ul class="nav dk text-sm">
+                <li>
+                    <a href="profile.html" class="auto">
+                        <i class="fa fa-angle-right text-xs"></i>
+
+                        <span>球队招募</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="blog.html" class="auto">
+                        <i class="fa fa-angle-right text-xs"></i>
+
+                        <span>自由球员</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="invoice.html" class="auto">
+                        <i class="fa fa-angle-right text-xs"></i>
+                        <span>挂牌球员</span>
+                    </a>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="nav text-sm">
+        <li class="hidden-nav-xs padder m-t m-b-sm text-xs text-muted">
+            <span class="pull-right"><a href="#"><i class="icon-plus i-lg"></i></a></span>
+            所属球队
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{$rootpath}}/images/mu.jpg" class="dker img-circle" style="height:40px;width:40px;" alt="...">
+                &nbsp;&nbsp;&nbsp;深圳红魔（经理）
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{$rootpath}}/images/chelsea.jpg" class="dker img-circle" style="height:40px;width:40px;" alt="...">
+                &nbsp;&nbsp;&nbsp;龙岗车仔
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{$rootpath}}/images/milan.jpg" class="dker img-circle" style="height:40px;width:40px;" alt="...">
+                &nbsp;&nbsp;&nbsp;米兰球迷
+            </a>
+        </li>
+        <li>
+            <a href="#">
+                <img src="{{$rootpath}}/images/rm.jpg" class="dker img-circle" style="height:40px;width:40px;" alt="...">
+                &nbsp;&nbsp;&nbsp;皇马家族
+            </a>
+        </li>
+    </ul>
+</nav>
+<!-- / nav -->

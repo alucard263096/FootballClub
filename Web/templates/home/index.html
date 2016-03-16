@@ -1,55 +1,6 @@
 {{include  file="$smarty_root/header.html" }}
 
-
-<div class="row">
-    <div class="col-md-2" >
-        <div class="list-group" id="lstMenu">
-            <a href="#" id="btnInbox" class="list-group-item btnMenu" tabid="inbox">信件箱<span class="badge">14</span></a>
-            <a href="#" id="btnCalendar" class="list-group-item btnMenu" tabid="calendar">日程</a>
-            <a href="#" id="btnConcern" class="list-group-item btnMenu" tabid="concern">我的关注</a>
-            <a href="#" id="btnSetting" class="list-group-item btnMenu" tabid="setting">设置</a>
-        </div>
-    </div>
-    <div class="col-md-10">
-        
-        <div class="row TabContext " id="inbox"  >
-            
-        </div>
-        <div class="row TabContext " id="calendar">
-            
-        </div>
-        <div class="row TabContext " id="concern">
-            
-        </div>
-        <div class="row TabContext " id="setting">
-            
-        </div>
-    </div>
-</div>
-
-<script>
-    $(document).ready(function () {
-        $("#lstMenu .btnMenu").click(function () {
-            var tabid = $(this).attr("tabid");
-            $(".TabContext").hide();
-            $("#" + tabid).show();
-            $("#lstMenu .btnMenu").removeClass("active");
-            $(this).addClass("active");
-        });
-
-        $("#btnInbox").click(function () {
-            if ($.trim($("#inbox").html()) != "") {
-                return;
-            }
-            var json = {};
-            $("#inbox").html("<div  class='loading'>努力加载中...</div>  ");
-            $("#inbox").load("{{$rootpath}}/Home/inbox.php", json, function () {
-
-            });
-        });
-        $("#lstMenu .btnMenu").first().addClass("active").click();
-    });
-</script>
+<p>草根足球</p>
 
 
 {{include  file="$smarty_root/footer.html" }}

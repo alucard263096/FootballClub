@@ -49,3 +49,14 @@ textarea {
 .blockquote-danger{
   border-left-color: #f2dede;
 }
+
+.caret-inverse {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  margin-left: 2px;
+  vertical-align: middle;
+  border-bottom: 4px solid;
+  border-right: 4px solid transparent;
+  border-left: 4px solid transparent;
+}
